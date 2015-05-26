@@ -1,0 +1,15 @@
+{
+	"name": "my_ldap",
+	"version": "0.0.1",
+	"description": "Connect ad, centaur, and student ad in one script",
+	"author": "kenpeter, https://github.com/kenpeter",
+
+	"main": "my_ldap.js",
+
+	"dependencies": {
+		"commander": "2.8.1",
+		"print_r": "0.0.1",
+		"ssl-root-cas": "1.1.10",	
+    "ldapjs": "git://github.com/mcavage/node-ldapjs.git#master"
+  }
+}
