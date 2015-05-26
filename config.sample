@@ -1,0 +1,32 @@
+// http://stackoverflow.com/questions/5869216/how-to-store-node-js-deployment-settings-configuration-files
+var config = {};
+
+config.ad = {};
+config.centaur = {};
+config.stu = {};
+
+// ad
+config.ad.username_part = "username";
+config.ad.password = "password";
+
+config.ad.url = "ldaps://something.edu.au:3269";
+config.ad.dn_search = "dc=something,dc=edu,dc=au"; 
+config.ad.username = "cn=" + config.ad.username_part + ",ou=another_444,ou=444,ou=unit,dc=something,dc=edu,dc=au";
+
+// centaur
+config.centaur.url = "ldaps://something.edu.au:636";
+config.centaur.dn_search = "ou=people,o=something";
+
+// student
+// Student name that you can test
+// * student_username = "user1";
+// * student_username = 'user2';
+config.stu.username_part = config.ad.username_part; 
+config.stu.password = config.ad.password;
+
+config.stu.url = "ldaps://something.bla..edu.au:636";
+config.stu.dn_search = "dc=something,dc=something,dc=edu,dc=au";
+config.stu.username = "whatever\\" + config.stu.username_part;
+
+
+module.exports = config;
